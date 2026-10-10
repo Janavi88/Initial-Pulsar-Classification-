@@ -1,74 +1,60 @@
 # Pulsar Signal Classification using Machine Learning
 
 ## Project Overview
+This project uses machine learning to classify radio signal candidates as **pulsars** or **non-pulsars** using the HTRU2 dataset.
 
-This project uses machine learning to classify radio signal candidates as either
-pulsars or non-pulsars using the HTRU2 dataset.
-
-The project compares three supervised machine learning models:
-
+## Models Used
 - Logistic Regression
 - Support Vector Machine (SVM)
 - Random Forest
-
-SMOTE is also used with Random Forest to handle the class imbalance in the training data.
+- Random Forest with SMOTE for handling class imbalance
 
 ## Dataset
+- **Samples:** 17,898
+- **Features:** 8 numerical features
+- **Non-pulsars (0):** 16,259
+- **Pulsars (1):** 1,639
 
-The HTRU2 dataset contains 17,898 samples and 8 numerical features.
-
-Target classes:
-
-- 0 - Non-Pulsar
-- 1 - Pulsar
-
-The dataset contains 16,259 non-pulsar samples and 1,639 pulsar samples.
-
-## Methods
-
-1. Load and analyze the dataset
-2. Split the data into training and testing sets
-3. Scale the features using StandardScaler
-4. Train Logistic Regression
-5. Train SVM
-6. Train Random Forest
-7. Apply SMOTE to the training data
-8. Train Random Forest using the SMOTE-balanced data
-9. Compare model performance using accuracy, precision, recall and F1-score
-10. Generate visualizations including class distribution and ROC curves
+## Methodology
+1. Load and analyze the dataset.
+2. Split data into training and testing sets.
+3. Scale features using `StandardScaler`.
+4. Train Logistic Regression, SVM, and Random Forest models.
+5. Apply SMOTE to balance the training data and retrain Random Forest.
+6. Compare models using accuracy, precision, recall, F1-score, and ROC-AUC.
+7. Visualize class distribution and ROC curves.
 
 ## How to Run
 
-Create and activate a Python virtual environment:
+Create and activate a virtual environment:
 
 ```bash
 python -m venv venv
+```
 
-Activate it on Windows:
+On Windows, activate it:
+
+```bash
 venv\Scripts\activate
+```
 
-Install the required packages:
+Install dependencies and run the project:
+
+```bash
 pip install -r requirements.txt
-
-Run the project:
 python data_analysis.py
+```
 
-Main Results
-The models are evaluated using:
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- ROC-AUC
-Recall is particularly important because correctly identifying actual pulsars is an important objective of the classification task.
-Project Files
+## Main Results
+Models are evaluated using accuracy, precision, recall, F1-score, and ROC-AUC. **Recall is particularly important** because identifying genuine pulsar candidates is a key objective.
+
+## Project Structure
+
+```text
 Pulsar_ML_project/
-│
 ├── data/
 │   └── HTRU_2.csv
-│
 ├── data_analysis.py
 ├── requirements.txt
 └── README.md
-
-
+```
