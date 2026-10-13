@@ -59,7 +59,7 @@ A short write-up is available in [`REPORT.pdf`](REPORT.pdf).
   <img src="profile_mean_distribution.png" width="48%" alt="Profile mean distribution by class" />
 </p>
 
-*Left: the strong class imbalance. Right: `profile_mean` separates the two classes noticeably, with pulsars shifted towards higher values.*
+*Left: the strong class imbalance. Right: `profile_mean` separates the two classes well. Non-pulsars cluster around 115–125, while pulsars sit mostly at much lower values (roughly 10–80), with only a small overlap.*
 
 ---
 
@@ -251,3 +251,4 @@ Running this check separately gives a Random Forest AUC of about **0.966** inste
 - N. V. Chawla et al., *SMOTE: Synthetic Minority Over-sampling Technique*, JAIR 16, 2002.
 
 ---
+
