@@ -239,7 +239,7 @@ Running this check separately gives a Random Forest AUC of about **0.966** inste
 - Evaluation uses a single train/test split. Stratified k-fold cross-validation would give more reliable estimates.
 - Hyperparameters (especially for SVM and Random Forest) were not systematically tuned. A `GridSearchCV` or `RandomizedSearchCV` would be a natural next step.
 - Only recall, precision and F1 at the default 0.5 threshold are reported. Precision-recall curves and threshold tuning suit imbalanced data well.
-- Other options to try: class weights (`class_weight="balanced"`) as an alternative to SMOTE, gradient boosting (XGBoost / LightGBM), and splitting the code into modules (`preprocess.py`, `train.py`, `evaluate.py`).
+- Other options to try: class weights (`class_weight="balanced"`) as an alternative to SMOTE, gradient boosting (XGBoost), and splitting the code into modules (`preprocess.py`, `train.py`, `evaluate.py`).
 - The current task is binary. Identifying specific pulsar types would need additional data.
 
 ---
